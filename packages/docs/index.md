@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Toy-Element"
-  text: "一个高仿 ElementPlus 组件库"
+  text: "高仿 ElementPlus 组件库"
   tagline: My great project tagline
   actions:
     - theme: brand
