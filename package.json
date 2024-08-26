@@ -7,7 +7,7 @@
     "dev": "pnpm --filter @toy-element/play dev",
     "docs:dev": "pnpm --filter @toy-element/docs dev",
     "docs:build": "pnpm --filter @toy-element/docs build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'todo'"
   },
   "keywords": [],
   "author": "",
