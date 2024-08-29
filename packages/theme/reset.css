@@ -1,4 +1,3 @@
-/** reset.css */
 body {
     font-family: var(--er-font-family);
     font-weight: 400;
@@ -8,83 +7,83 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
-}
-
-a {
+  }
+  
+  a {
     color: var(--er-color-primary);
     text-decoration: none;
-
+  
     &:hover,
     &:focus {
-        color: var(--er-color-primary-light-3);
+      color: var(--er-color-primary-light-3);
     }
-
+  
     &:active {
-        color: var(--er-color-primary-dark-2);
+      color: var(--er-color-primary-dark-2);
     }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--er-text-color-regular);
     font-weight: inherit;
-
+  
     &:first-child {
-        margin-top: 0;
+      margin-top: 0;
     }
-
+  
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: calc(var(--er-font-size-base) + 6px);
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: calc(var(--er-font-size-base) + 4px);
-}
-
-h3 {
+  }
+  
+  h3 {
     font-size: calc(var(--er-font-size-base) + 2px);
-}
-
-h4,
-h5,
-h6,
-p {
+  }
+  
+  h4,
+  h5,
+  h6,
+  p {
     font-size: inherit;
-}
-
-p {
+  }
+  
+  p {
     line-height: 1.8;
-
+  
     &:first-child {
-        margin-top: 0;
+      margin-top: 0;
     }
-
+  
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
-}
-
-sup,
-sub {
+  }
+  
+  sup,
+  sub {
     font-size: calc(var(--er-font-size-base) - 1px);
-}
-
-small {
+  }
+  
+  small {
     font-size: calc(var(--er-font-size-base) - 2px);
-}
-
-hr {
+  }
+  
+  hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid var(--er-border-color-lighter);
-}
+  }
