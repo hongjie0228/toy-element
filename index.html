@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .infinite-list-container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #666;
+            position: relative;
+            overflow: auto;
+        }
+        .infinite-list-phantom {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .infinite-list {
+            border: 1px solid;
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="infinite-list-container">
+        <div class="infinite-list-phantom"></div>
+        <div class="infinite-list"></div>
+    </div>
+    <script>
+        class vList{
+            constructor(list){
+                // 获取doms
+                this.doms = {
+                    container: document.querySelector('.infinite-list-container'),
+                    phantom: document.querySelector('.infinite-list-phantom'),
+                    list: document.querySelector('.infinite-list')
+                }
+                this.list = list;
+                // 每一项的高度
+                this.itemHeight = 50;
+                // 设置容器总高
+                this.totalHeight = list.length * this.itemHeight;
+                this.doms.phantom.style.height=this.totalHeight + "px"
+                // 获取每页多少条数据
+                this.totalCount = Math.ceil(this.doms.list.clientHeight / this.itemHeight);
+                this.doms.container.addEventListener('scroll',()=>{
+                    this.render()
+                })
+                this.render()
+            }
+            render(){
+                const scrollTop = this.doms.container.scrollTop
+                // 计算起始索引
+                const startIdx = Math.floor(scrollTop / this.itemHeight);
+                const endIdx = Math.ceil(startIdx + this.totalCount);
+                var Ary = this.list.slice(startIdx,endIdx);
+                var html = ''
+                Ary.forEach(function(item){
+                    html += `<li>32${item}</li>`
+                })
+                console.log("scrollTop - (scrollTop % this.itemHeight):",scrollTop - (scrollTop % this.itemHeight));
+                this.doms.list.style.transform = `translateY(${scrollTop - (scrollTop % this.itemHeight)}px)`;
+                this.doms.list.innerHTML = html;
+            }
+        }
+        var list = [];
+        for(let i=0;i<1000;i++){
+            list.push(i)
+        }
+        new vList(list)
+    </script>
+</body>
+</html>
