@@ -81,9 +81,6 @@ importers:
       postcss-nested:
         specifier: ^6.0.1
         version: 6.2.0(postcss@8.4.41)
-      release-it:
-        specifier: ^17.6.0
-        version: 17.6.0(typescript@5.5.4)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -136,6 +133,9 @@ importers:
         specifier: ^3.4.19
         version: 3.4.38(typescript@5.5.4)
     devDependencies:
+      release-it:
+        specifier: ^17.6.0
+        version: 17.6.0(typescript@5.5.4)
       vite-plugin-dts:
         specifier: ^3.9.1
         version: 3.9.1(@types/node@20.16.1)(rollup@4.21.0)(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1))

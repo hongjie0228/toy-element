@@ -1,6 +1,6 @@
 {
   "name": "toy-elements",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Components library by Vue3 + Ts",
   "type": "module",
   "files": [
@@ -23,8 +23,7 @@
       "import": "./dist/",
       "require": "./dist/"
     }
-  },  
-  
+  },
   "scripts": {
     "build": "run-s clean build-only move-style",
     "build-only": "run-p build-es build-umd",
@@ -36,19 +35,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-     "@toy-elements/components": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
+    "@toy-elements/components": "workspace:*",
     "async-validator": "^4.2.5"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "release-it": "^17.6.0",
     "vite-plugin-dts": "^3.9.1"
-   
   },
   "peerDependencies": {
     "vue": "^3.4.19"
