@@ -1,6 +1,6 @@
 {
   "name": "toy-elements",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Components library by Vue3 + Ts",
   "type": "module",
   "files": [
