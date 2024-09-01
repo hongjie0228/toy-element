@@ -1,6 +1,6 @@
 {
   "name": "toy-elements",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Components library by Vue3 + Ts",
   "type": "module",
   "files": [
@@ -39,13 +39,14 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
-    "@toy-elements/components": "workspace:*",
+   
     "async-validator": "^4.2.5"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@toy-elements/components": "workspace:*",
     "release": "^6.3.1",
     "vite-plugin-dts": "^3.9.1"
   },
