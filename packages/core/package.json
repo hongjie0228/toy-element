@@ -31,7 +31,8 @@
     "build-es": "vite build --config vite.es.config.ts",
     "move-style": "move-file dist/es/index.css dist/index.css",
     "clean": "rimraf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "release-it"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
