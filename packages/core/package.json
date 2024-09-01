@@ -1,12 +1,15 @@
 {
-  "name": "toy-element",
+  "name": "toy-elements",
   "version": "1.0.0",
   "description": "Components library by Vue3 + Ts",
   "type": "module",
   "files": [
     "dist"
   ],
-  "sideEffects": ["./dist/index.css"],
+  "sideEffects": [
+    "./dist/index.css",
+    "./dist/theme/*.css"
+  ],
   "main": "./dist/umd/index.umd.cjs",
   "module": "./dist/es/index.js",
   "types": "./dist/types/core/index.d.ts",
@@ -23,15 +26,17 @@
   },  
   
   "scripts": {
-    "build": "run-s build-only move-style",
+    "build": "run-s clean build-only move-style",
     "build-only": "run-p build-es build-umd",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
     "move-style": "move-file dist/es/index.css dist/index.css",
+    "clean": "rimraf dist",
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-     "@toy-element/components": "workspace:*",
+     "@toy-elements/components": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
