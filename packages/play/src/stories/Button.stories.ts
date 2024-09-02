@@ -3,6 +3,8 @@ import {fn,within,userEvent,expect} from '@storybook/test';
 
 import { ErButton,ErButtonGroup } from 'toy-elements';
 
+import "toy-elements/dist/index.css";
+
 type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes };
 
 const meta: Meta<typeof ErButton> = {

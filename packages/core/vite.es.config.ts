@@ -39,9 +39,17 @@ export default defineConfig({
                 "async-validator",
             ],
             output: {
-                assetFileNames: (assetInfo) => {
-                    if (assetInfo.name === 'style.css') return 'index.css';
-                    return assetInfo.name as string;
+                assetFileNames: (chunkInfo) => {
+                    if (chunkInfo.name === "style.css") {
+                        return "index.css";
+                      }
+                      if (
+                        chunkInfo.type === "asset" &&
+                        /\.(css)$/i.test(chunkInfo.name as string)
+                      ) {
+                        return "theme/[name].[ext]";
+                      }
+                      return chunkInfo.name as string;
                 },
                 // 分包
                 manualChunks(id) {
