@@ -14,7 +14,7 @@ export interface ButtonProps {
   loadingIcon?: string;
   disabled?: boolean;
   icon?: string;
-  circle: boolean;
+  circle?: boolean;
   plain?: boolean;
   round?: boolean;
   autofocus?: boolean;
