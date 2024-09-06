@@ -25,13 +25,12 @@
     }
   },
   "scripts": {
-    "build": "run-s clean build-only move-style",
-    "build-only": "run-p build-es build-umd",
+    "build:watch": "run-p build-es:watch build-umd:watch",
+    "build": "run-p build-es build-umd",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
-    "move-style": "move-file dist/es/index.css dist/index.css",
-    "clean": "rimraf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-umd:watch": "vite build --watch --config vite.umd.config.ts",
+    "build-es:watch": "vite build --watch --config vite.es.config.ts",
     "release": "release-it"
   },
   "dependencies": {
@@ -39,15 +38,17 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
-   
     "async-validator": "^4.2.5"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@toy-elements/components": "workspace:*",
     "release": "^6.3.1",
+    "terser": "^5.31.6",
+    "vite-plugin-compression2": "^1.2.0",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
