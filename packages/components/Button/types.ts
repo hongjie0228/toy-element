@@ -1,5 +1,5 @@
 
-import type { Ref } from 'vue'
+import type { ComputedRef, Ref } from 'vue'
 
 export type ButtonType = "primary" | "success" | "warning" | "danger" | 'info' ;
 export type NativeType = "button" | "submit" | 'reset' ;
@@ -39,6 +39,10 @@ export interface ButtonEmits {
   (e: 'click',val:MouseEvent) :void;
 }
 
+// 使用者可通过ref去使用，进行去判断disalble属性、size属性、type属性
 export interface ButtonInstance {
-  ref: Ref<HTMLButtonElement | void>
+  ref: Ref<HTMLButtonElement | void>;
+  disabled: ComputedRef<boolean> ;
+  size: ComputedRef<ButtonSize | "">;
+  type:ComputedRef<ButtonType | "">;
 }
