@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { readdir, readdirSync } from 'fs';
 import vue from '@vitejs/plugin-vue';
+import { visualizer } from "rollup-plugin-visualizer";
 import dts from 'vite-plugin-dts';
 import terser from '@rollup/plugin-terser'
 import { resolve } from 'path'
@@ -34,6 +35,9 @@ function moveStyles(){
 export default defineConfig({
     plugins: [
         vue(),
+        visualizer({
+            filename: "dist/stats.es.html",
+        }),
         dts({
             tsconfigPath: '../../tsconfig.build.json',
             outDir: 'dist/types'
@@ -80,7 +84,7 @@ export default defineConfig({
         // },
         cssCodeSplit: true, 
         lib: {
-            entry: resolve(__dirname, './index.ts'),
+            entry: resolve(__dirname, '../index.ts'),
             name: 'ToyElement',
             fileName: 'index',
             formats: ['es']
