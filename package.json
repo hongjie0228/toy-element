@@ -34,6 +34,7 @@
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
     "postcss-nested": "^6.0.1",
+    "release-it": "^17.6.0",
     "shelljs": "^0.8.5",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
