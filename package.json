@@ -47,6 +47,9 @@
     "@toy-elements/theme": "workspace:*",
     "@toy-elements/utils": "workspace:*",
     "lodash-es": "^4.17.21",
+    "@vitest/coverage-v8": "^1.4.0",
+    "@vue/test-utils": "^2.4.5",
+    "jsdom": "^24.0.0",
     "toy-elements": "workspace:*",
     "vue": "^3.4.19"
   }
